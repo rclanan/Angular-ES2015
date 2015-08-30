@@ -1,0 +1,31 @@
+<br />
+<div style="text-align:left">
+    <h1>Object Literals</h1>
+    <h5>Shorthand Functions</h5>
+    <div>let functionObj = {</div>
+    <div class="tab">first: 'Michael',</div>
+    <div class="tab">last: 'Jordan',</div>
+    <div class="tab">name() {return this.first + ' ' + this.last;}</div>
+    <div>};</div>
+    <br/>
+    <div>Test: name():</div>
+    <div>{{objectLiteralsCtrl.shortFunction}}</div>
+    <br/>
+    <h5>Shorthand Properties</h5>
+    <div>let obj: {first: first, last: last};</div>
+    <div>now equals</div> 
+    <div>let obj: {first, last};</div>
+    <br />
+    <div>Test Result: {{objectLiteralsCtrl.property}}</div>
+    <br />
+    <h5>Computed Property</h5>
+    <br />
+    let propKey = 'user';<br/>
+    let computedObj = {<br/>
+    <div class="tab">[propKey]: true,</div>
+    <div class="tab">['f'+'irst']: Sam</div>
+    };</br>
+    <br/>
+    <div>Show name (computedObj.first) if computedObj.user is true:</div>
+    <div>{{objectLiteralsCtrl.computed}}</div>
+</div>
