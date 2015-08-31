@@ -31,7 +31,7 @@ class DestructuringController {
         vm.test = test === undefined ? 'undefined' : test;
 
         // defaults
-        let [testDefault = 1] = [];    // jshint ignore:line
+        let [testDefault = 'New York'] = [];    // jshint ignore:line
         vm.testDefault = testDefault;
     }
 }
