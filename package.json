@@ -24,7 +24,7 @@
   "devDependencies": {
     "es6-module-loader": "^0.15.0",
     "gulp-concat": "^2.6.0",
-    "gulp-jshint": "^1.9.4",
+    "gulp-jshint": "^1.11.2",
     "jshint-stylish": "^1.0.1"
   }
 }

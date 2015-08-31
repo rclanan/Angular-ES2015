@@ -33,6 +33,11 @@ function Router($stateProvider, $urlRouterProvider) {
             controller : 'ObjectLiteralsCtrl as objectLiteralsCtrl',
             templateUrl: 'components/object-literals/object-literals.html'
         })
+        .state('destructuring', {
+            url: '/destructuring',
+            controller : 'DestructuringCtrl as destructuringCtrl',
+            templateUrl: 'components/destructuring/destructuring.html'
+        })
         .state('details', {
             url: '/details',
             controller : 'DetailsCtrl as detailsCtrl',

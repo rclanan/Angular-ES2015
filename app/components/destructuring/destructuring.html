@@ -1,0 +1,40 @@
+<br />
+<div style="text-align:left">
+    <h1>Destructuring</h1>
+    <h5>list matching</h5>
+    <div>let [a, , b] = [1,2,3];</div>
+    <br />
+
+    <h5>object matching</h5>
+    <div>let person = {</div>
+    <div>    first: 'Chris',</div>
+    <div>    last: 'Paul',</div>
+    <div>    phone: 333-444-5555</div>
+    <div>};</div>
+
+    <div>let {first, last} = person;</div>
+    <h5>result: {{destructuringCtrl.match}}</h5>
+    <br/>
+
+    <h5>object matching shorthand</h5>
+    <div>let {first: f, last: l} = person;</div>
+    <h5>result: {{destructuringCtrl.matchShorthand}}</h5>
+    <br/>
+
+    <h5>// Param Position</h5>
+    <div>function position({first: x}) {</div>
+    <div>    console.log(x);</div>
+    <div>}</div>
+    <div>position({first: 'Joe'});</div>
+    <h5>result: {[destructuringCtrl.position</h5>
+    <br/>
+
+    <h5>Handles exception</h5>
+    <div>let [test] = [];</div>
+    <h5>result: {{destructuringCtrl.test}}</h5>
+    <br/>
+
+    <h5>defaults</h5>
+    <div>let [testDefault = 1] = []; </div>
+    <h5>result: {{destructuringCtrl.testDefault}}</h5>
+</div>
