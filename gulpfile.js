@@ -49,7 +49,6 @@ gulp.task('systemjs-build', function () {
     var builder = new Builder({
         baseURL : path.resolve(config.dist),
 
-        // opt in to Babel for transpiling over Traceur
         transpiler: 'babel'
     });
 
@@ -65,6 +64,10 @@ gulp.task('systemjs-build', function () {
 gulp.task('move', function() {
     gulp.src('./app/index.html')
         .pipe(gulp.dest('dist/'));
+
+    gulp
+        .src(['./app/bower_components/**/*.*'])
+        .pipe(gulp.dest('./dist/bower_components'));
 
     gulp
         .src(['./app/components/**/*.html'])
