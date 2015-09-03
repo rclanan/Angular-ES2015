@@ -38,6 +38,21 @@ function Router($stateProvider, $urlRouterProvider) {
             controller : 'DestructuringCtrl as destructuringCtrl',
             templateUrl: 'components/destructuring/destructuring.html'
         })
+        .state('spread', {
+            url: '/spread',
+            controller : 'SpreadCtrl as spreadCtrl',
+            templateUrl: 'components/spread/spread.html'
+        })
+        .state('templates', {
+            url: '/templates',
+            controller : 'TemplatesCtrl as templatesCtrl',
+            templateUrl: 'components/templates/templates.html'
+        })
+        .state('misc', {
+            url: '/misc',
+            controller : 'MiscCtrl as miscCtrl',
+            templateUrl: 'components/misc/misc.html'
+        })
         .state('details', {
             url: '/details',
             controller : 'DetailsCtrl as detailsCtrl',
