@@ -28,6 +28,11 @@ function Router($stateProvider, $urlRouterProvider) {
             controller : 'ArrowCtrl as arrowCtrl',
             templateUrl: 'components/arrow/arrow.html'
         })
+        .state('default', {
+            url: '/default',
+            controller : 'DefaultCtrl as defaultCtrl',
+            templateUrl: 'components/default/default.html'
+        })
         .state('objectliterals', {
             url: '/objectliterals',
             controller : 'ObjectLiteralsCtrl as objectLiteralsCtrl',
