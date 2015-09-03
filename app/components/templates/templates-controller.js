@@ -4,9 +4,7 @@ class TemplatesController {
         let vm = this;
 
         //literals
-        let first = 'Bob';
-        let last = 'Smith';
-        let food = 'Pizza';
+        let [first, last, food] = ['Bob', 'Smith', 'Pizza'];
 
         let template = `This is ${first} ${last}.
         His favorite food is ${food}.`;        
