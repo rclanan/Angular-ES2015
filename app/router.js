@@ -28,6 +28,11 @@ function Router($stateProvider, $urlRouterProvider) {
             controller : 'ArrowCtrl as arrowCtrl',
             templateUrl: 'components/arrow/arrow.html'
         })
+        .state('mapssets', {
+            url: '/mapssets',
+            controller : 'MapsSetsCtrl as mapsSetsCtrl',
+            templateUrl: 'components/maps-sets/maps-sets.html'
+        })
         .state('default', {
             url: '/default',
             controller : 'DefaultCtrl as defaultCtrl',

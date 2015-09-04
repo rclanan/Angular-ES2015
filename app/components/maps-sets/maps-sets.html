@@ -1,0 +1,37 @@
+<br />
+<div>
+    <h1>Maps and Sets</h1>
+    <br/>
+    <h5>Maps</h5>
+    <div>let map = new Map([['id', '1'],</div>
+    <div>    ['first', 'Steve'],</div>
+    <div>    ['last', 'Winston']]);</div>
+
+    <h6>{{mapsSetsCtrl.map}}</h5>
+    <br/>
+
+    <h5>Weak Maps</h5>
+    <div>let [weakMap, key1, key2] = [new WeakMap(), {id: 1}, {id: 2}];</div>
+    <div>weakMap.set(key1, 'fish');</div>
+    <div>weakMap.set(key2, 'dog');</div>
+    <br />
+    <div>key1 = {{mapsSetsCtrl.key}}</div>
+    <div>Has key1 = {{mapsSetsCtrl.hasKey}}</div>
+    <div>Get key1 = {{mapsSetsCtrl.getKey1}}</div>
+    <br />
+    <div>key1 = {id: 2}; //updating key 1</div>
+    <div>Has key1 = {{mapsSetsCtrl.hasKeyCheck}}</div>
+    <br />
+    <h5>WeakMap key must be an object</h5>
+    <h5>WeakMap key gets removed if object no longer used</h5>
+    <br/>
+    <br/>
+    <h5>Sets</h5>
+    <div>let pizzaRestaurants = new Set();</div>
+    <div>pizzaRestaurants.add('Papa Murphys').add('Papa Johns').add('Pizza Hut');</div>
+    <br />
+    <div>size = {{mapsSetsCtrl.pizzaSize}}</div>
+    <div>Has Pizza Hut = {{mapsSetsCtrl.hasPizzaHut}}</div>
+    <div>Pizza Set Result: {{mapsSetsCtrl.pizzaResult</div>
+    <div>Pizza Array: {{mapsSetsCtrl.pizzArray</div>
+</div>
