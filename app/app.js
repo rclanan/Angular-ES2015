@@ -11,6 +11,7 @@ import DestructuringController from 'components/destructuring/destructuring-cont
 import SpreadController from 'components/spread/spread-controller';
 import TemplatesController from 'components/templates/templates-controller';
 import MiscController from 'components/misc/misc-controller';
+import GeneratorsController from 'components/generators/generators-controller';
 
 var app = angular.module('app', ['ui.router']);
 
@@ -25,5 +26,6 @@ app.controller('DestructuringCtrl', DestructuringController);
 app.controller('SpreadCtrl', SpreadController);
 app.controller('TemplatesCtrl', TemplatesController);
 app.controller('MiscCtrl', MiscController);
+app.controller('GeneratorsCtrl', GeneratorsController);
 
 app.config(Router);

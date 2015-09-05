@@ -75,7 +75,11 @@ gulp.task('move', function() {
     
     gulp
         .src(['./app/css/*.css'])
-        .pipe(gulp.dest('./dist/css'))
+        .pipe(gulp.dest('./dist/css'));
+
+    gulp
+        .src(['./node_modules/babel-core/browser-polyfill.js'])
+        .pipe(gulp.dest('./dist/scripts'));
 });
 
 gulp.task('connect', function () {

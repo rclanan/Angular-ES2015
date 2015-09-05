@@ -8,7 +8,7 @@
   "freeze": true,
   "immed": true,
   "indent": 4,
-  "newcap": true,
+  "newcap": false,
   "noarg": true,
   "noempty": true,
   "nonbsp": true,

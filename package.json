@@ -22,6 +22,7 @@
     "vinyl-source-stream": "^1.1.0"
   },
   "devDependencies": {
+    "babel-core": "^5.8.23",
     "es6-module-loader": "^0.15.0",
     "gulp-concat": "^2.6.0",
     "gulp-jshint": "^1.11.2",
