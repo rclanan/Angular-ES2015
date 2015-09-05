@@ -12,7 +12,7 @@ class MapsSetsController {
 
         vm.map = '';
         for (let entry of map.entries()) {
-            vm.map += `${entry[0]}: ${entry[1]}`;
+            vm.map += `${entry[0]}: ${entry[1]}  `;
         }
 
         // Weak Map
@@ -46,6 +46,7 @@ class MapsSetsController {
         for (let [key, value] of pizzaRestaurants.entries()) {
           pizzaResult += value + ' ';
         }
+        vm.pizzaResult = pizzaResult;
 
         let array = [...pizzaRestaurants];
         vm.pizzaArray = array;
