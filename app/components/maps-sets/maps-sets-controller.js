@@ -54,6 +54,14 @@ class MapsSetsController {
         // Weak Sets work the same was as Weak Maps, but for Sets
         // Basically values must be an object, and you can't iterate because there
         // might no longer be a reference to an object
+        
+        let weakSet = new WeakSet();
+        let user = {userId: 1234};
+        
+        weakSet.add(user);
+        vm.weakSetHasUser = weakSet.has(user);
+        user = {userId: 777};
+        vm.weakSetHasUser2 = weakSet.has(user);
     }
 }
 
