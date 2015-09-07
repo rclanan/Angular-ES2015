@@ -63,6 +63,16 @@ function Router($stateProvider, $urlRouterProvider) {
             controller : 'GeneratorsCtrl as generatorsCtrl',
             templateUrl: 'components/generators/generators.html'
         })
+        .state('proxies', {
+            url: '/proxies',
+            controller : 'ProxiesCtrl as proxiesCtrl',
+            templateUrl: 'components/proxies/proxies.html'
+        })
+        .state('promises', {
+            url: '/promises',
+            controller : 'PromisesCtrl as promisesCtrl',
+            templateUrl: 'components/promises/promises.html'
+        })
         .state('misc', {
             url: '/misc',
             controller : 'MiscCtrl as miscCtrl',

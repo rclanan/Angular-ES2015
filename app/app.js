@@ -12,6 +12,8 @@ import SpreadController from 'components/spread/spread-controller';
 import TemplatesController from 'components/templates/templates-controller';
 import MiscController from 'components/misc/misc-controller';
 import GeneratorsController from 'components/generators/generators-controller';
+import ProxiesController from 'components/proxies/proxies-controller';
+import PromisesController from 'components/promises/promises-controller';
 
 var app = angular.module('app', ['ui.router']);
 
@@ -27,5 +29,7 @@ app.controller('SpreadCtrl', SpreadController);
 app.controller('TemplatesCtrl', TemplatesController);
 app.controller('MiscCtrl', MiscController);
 app.controller('GeneratorsCtrl', GeneratorsController);
+app.controller('ProxiesCtrl', ProxiesController);
+app.controller('PromisesCtrl', PromisesController);
 
 app.config(Router);
