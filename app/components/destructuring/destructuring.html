@@ -7,9 +7,13 @@
 
     <h5>object matching</h5>
     <div>let person = {</div>
-    <div>    first: 'Chris',</div>
-    <div>    last: 'Paul',</div>
-    <div>    phone: 333-444-5555</div>
+    <div class="tab">first: 'Chris',</div>
+    <div class="tab">last: 'Paul',</div>
+    <div class="tab">phone: 333-444-5555,</div>
+    <div class="tab">address: {</div>
+    <div style="padding-left: 50px">city: 'Los Angeles',</div>
+    <div style="padding-left: 50px">state: 'California'</div>
+    <div class="tab">}</div>
     <div>};</div>
 
     <div>let {first, last} = person;</div>
@@ -21,9 +25,15 @@
     <h5>result: {{destructuringCtrl.matchShorthand}}</h5>
     <br/>
 
+    <h5>Nested Object desctructuring</h5>
+    <div>let {first: firstName, last: lastName,</div>
+    <div class="tab">address: {city: town}} = person;</div>
+    <h5>result (town): {{destructuringCtrl.nestedObject}}</h5>
+    <br/>
+
     <h5>// Param Position</h5>
     <div>function position({first: x}) {</div>
-    <div>    console.log(x);</div>
+    <div class="tab">console.log(x);</div>
     <div>}</div>
     <div>position({first: 'Joe'});</div>
     <h5>result: {[destructuringCtrl.position</h5>

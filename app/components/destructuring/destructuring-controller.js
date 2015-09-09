@@ -9,7 +9,11 @@ class DestructuringController {
         let person = {
             first: 'Chris',
             last: 'Paul',
-            phone: 333-444-5555
+            phone: 333-444-5555,
+            address: {
+                city: 'Los Angeles',
+                state: 'California'
+            }
         };
 
         // object matching
@@ -19,6 +23,11 @@ class DestructuringController {
         // object matching shorthand
         let {first: f, last: l} = person;
         vm.matchShorthand = f + ' '  + l;
+
+        let {first: firstName, last: lastName, 
+          address: {city: town}} = person;
+
+        vm.nestedObject = town;
 
         // Param Position
         function position({first: x}) {

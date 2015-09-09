@@ -15,8 +15,6 @@ class PromisesController {
 
         getPromise(true).then(function (val) {
             vm.resolve = val;
-        }, function (val) {
-            console.log(val);
         });
 
         getPromise(false).then(function (val) {
