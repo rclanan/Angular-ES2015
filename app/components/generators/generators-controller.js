@@ -3,11 +3,6 @@ class GeneratorsController {
     constructor() {
         let vm = this;
 
-        function *generator () {
-            yield 1;
-            yield 2;
-        }
-
         function *genNumbers () {
             yield 1;
             yield 2;

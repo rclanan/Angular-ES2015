@@ -78,6 +78,11 @@ function Router($stateProvider, $urlRouterProvider) {
             controller : 'MiscCtrl as miscCtrl',
             templateUrl: 'components/misc/misc.html'
         })
+        .state('symbol', {
+            url: '/symbol',
+            controller : 'SymbolCtrl as symbolCtrl',
+            templateUrl: 'components/symbol/symbol.html'
+        })
         .state('details', {
             url: '/details',
             controller : 'DetailsCtrl as detailsCtrl',

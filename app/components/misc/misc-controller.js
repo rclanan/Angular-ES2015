@@ -11,7 +11,7 @@ class ArrowController {
 
             // new - for-of
             for(let elem of arr) {
-                result += elem + ' ';
+                result += `${elem} `;
             }
 
             //for-of would show 2 4 6 and for-in would show 0 1 2 

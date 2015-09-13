@@ -13,6 +13,7 @@ import TemplatesController from 'components/templates/templates-controller';
 import MiscController from 'components/misc/misc-controller';
 import GeneratorsController from 'components/generators/generators-controller';
 import ProxiesController from 'components/proxies/proxies-controller';
+import SymbolController from 'components/symbol/symbol-controller';
 import PromisesController from 'components/promises/promises-controller';
 
 var app = angular.module('app', ['ui.router']);
@@ -30,6 +31,7 @@ app.controller('TemplatesCtrl', TemplatesController);
 app.controller('MiscCtrl', MiscController);
 app.controller('GeneratorsCtrl', GeneratorsController);
 app.controller('ProxiesCtrl', ProxiesController);
+app.controller('SymbolCtrl', SymbolController);
 app.controller('PromisesCtrl', PromisesController);
 
 app.config(Router);
