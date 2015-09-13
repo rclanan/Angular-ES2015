@@ -26,6 +26,7 @@ class ArrowController {
 
             vm.startsWith = name.startsWith('Josh');
             vm.endsWith = name.endsWith('th');
+            vm.repeat = name.repeat(3);
         }
     }
 }
