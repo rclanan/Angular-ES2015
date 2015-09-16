@@ -53,6 +53,11 @@ function Router($stateProvider, $urlRouterProvider) {
             controller : 'SpreadCtrl as spreadCtrl',
             templateUrl: 'components/spread/spread.html'
         })
+        .state('rest', {
+            url: '/rest',
+            controller : 'RestCtrl as restCtrl',
+            templateUrl: 'components/rest/rest.html'
+        })
         .state('templates', {
             url: '/templates',
             controller : 'TemplatesCtrl as templatesCtrl',
