@@ -5,6 +5,8 @@ class ArrowController {
 
         forOf();
 
+        objectAssign();
+
         function forOf () {
             let arr = [2, 4, 6];
             let result = '';
@@ -27,6 +29,19 @@ class ArrowController {
             vm.startsWith = name.startsWith('Josh');
             vm.endsWith = name.endsWith('th');
             vm.repeat = name.repeat(3);
+        }
+
+        function objectAssign () {
+            const player = {first: 'Andrew', last: 'Luck'};
+            const colts = {team: 'Colts', city: 'Indianapolis'};
+            Object.assign(player, colts);
+
+            console.log(player.team);
+
+
+            const pacers = Object.assign({}, colts);
+            pacers.team = 'Pacers';
+            console.log(pacers.team);
         }
     }
 }
