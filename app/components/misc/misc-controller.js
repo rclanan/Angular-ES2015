@@ -12,7 +12,7 @@ class ArrowController {
             let result = '';
 
             // new - for-of
-            for(let elem of arr) {
+            for (let elem of arr) {
                 result += `${elem} `;
             }
 
@@ -23,7 +23,7 @@ class ArrowController {
             vm.forOf = result;
 
             //includes
-            let name = 'Josh Smith';
+            const name = 'Josh Smith';
             vm.includes = name.includes('mith');
 
             vm.startsWith = name.startsWith('Josh');
