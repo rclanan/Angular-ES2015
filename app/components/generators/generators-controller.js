@@ -29,6 +29,17 @@ class GeneratorsController {
                                    //  53 = 5 + 9 + 39
 
 
+        let promise = (x) => new Promise((resolve, reject) => resolve(x));
+
+        function* genPromise () {
+          var x = yield promise('The Promise Resolved!')
+          vm.genPromise = x;
+        }
+
+        var foo = new genPromise();
+
+        foo.next().value.then(x => foo.next(x));
+
     }
 }
 
