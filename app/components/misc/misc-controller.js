@@ -1,4 +1,4 @@
-class ArrowController {
+class MiscController {
 
     constructor() {
         let vm = this;
@@ -46,4 +46,4 @@ class ArrowController {
     }
 }
 
-export default ArrowController;
+export default MiscController;
