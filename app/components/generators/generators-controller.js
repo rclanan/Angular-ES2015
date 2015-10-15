@@ -32,13 +32,13 @@ class GeneratorsController {
         let promise = (x) => new Promise((resolve, reject) => resolve(x));
 
         function* genPromise () {
-          var x = yield promise('The Promise Resolved!')
+          var x = yield promise('The Promise Resolved!');
           vm.genPromise = x;
         }
 
-        var foo = new genPromise();
+        var fooPromise = new genPromise();
 
-        foo.next().value.then(x => foo.next(x));
+        fooPromise.next().value.then(x => fooPromise.next(x));
 
     }
 }
