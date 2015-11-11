@@ -1,11 +1,9 @@
 class DefaultController {
 
     constructor() {
-        let vm = this;
-        
-        let [year = 1995, rating = 78] = [];    // jshint ignore:line 
-        vm.firstMovie = movie('Braveheart', 3, year, rating);
-        vm.secondMovie = movie('Ant-Man', 2, undefined, 79);
+        let [year = 1995, rating = 78] = [];    // jshint ignore:line
+        this.firstMovie = movie('Braveheart', 3, year, rating);
+        this.secondMovie = movie('Ant-Man', 2, undefined, 79);
     }
 }
 

@@ -1,8 +1,6 @@
 class GeneratorsController {
 
     constructor() {
-        let vm = this;
-
         function *genNumbers () {
             yield 1;
             yield 2;
@@ -33,7 +31,7 @@ class GeneratorsController {
 
         function* genPromise () {
           var x = yield promise('The Promise Resolved!');
-          vm.genPromise = x;
+          this.genPromise = x;
         }
 
         var fooPromise = new genPromise();

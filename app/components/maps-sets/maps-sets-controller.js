@@ -1,18 +1,16 @@
 class MapsSetsController {
 
     constructor() {
-        let vm = this;
-
         // Map
         let map = new Map([['id', '1'],
                           ['first', 'Steve'],
                           ['last', 'Winston']]);
-        
+
         map.set('phone', '333-444-5555');
 
-        vm.map = '';
+        this.map = '';
         for (let entry of map.entries()) {
-            vm.map += `${entry[0]}: ${entry[1]}  `;
+            this.map += `${entry[0]}: ${entry[1]}  `;
         }
 
         // Weak Map
@@ -26,12 +24,12 @@ class MapsSetsController {
         weakMap.set(key1, 'fish');
         weakMap.set(key2, 'dog');
 
-        vm.key = key1;  // {id: 1}
-        vm.hasKey = weakMap.has(key1); // true
-        vm.getKey1 = weakMap.get(key1); // fish
+        this.key = key1;  // {id: 1}
+        this.hasKey = weakMap.has(key1); // true
+        this.getKey1 = weakMap.get(key1); // fish
 
         key1 = {id: 2};
-        vm.hasKeyCheck = weakMap.has(key1);
+        this.hasKeyCheck = weakMap.has(key1);
 
 
         // Sets
@@ -39,29 +37,29 @@ class MapsSetsController {
 
         pizzaRestaurants.add('Papa Murphys').add('Papa Johns').add('Pizza Hut');
 
-        vm.pizzaSize = pizzaRestaurants.size;
-        vm.hasPizzaHut = pizzaRestaurants.has('Pizza Hut');
+        this.pizzaSize = pizzaRestaurants.size;
+        this.hasPizzaHut = pizzaRestaurants.has('Pizza Hut');
 
         let pizzaResult = '';
         for (let [key, value] of pizzaRestaurants.entries()) {
           pizzaResult += value + ' ';
         }
-        vm.pizzaResult = pizzaResult;
+        this.pizzaResult = pizzaResult;
 
         let array = [...pizzaRestaurants];
-        vm.pizzaArray = array;
+        this.pizzaArray = array;
 
         // Weak Sets work the same was as Weak Maps, but for Sets
         // Basically values must be an object, and you can't iterate because there
         // might no longer be a reference to an object
-        
+
         let weakSet = new WeakSet();
         let user = {userId: 1234};
-        
+
         weakSet.add(user);
-        vm.weakSetHasUser = weakSet.has(user);
+        this.weakSetHasUser = weakSet.has(user);
         user = {userId: 777};
-        vm.weakSetHasUser2 = weakSet.has(user);
+        this.weakSetHasUser2 = weakSet.has(user);
     }
 }
 

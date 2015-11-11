@@ -1,8 +1,6 @@
 class PromisesController {
 
     constructor() {
-        let vm = this;
-
         function getPromise(val) {
             return new Promise(function (resolve, reject) {
                 if (val) {
@@ -14,13 +12,13 @@ class PromisesController {
         }
 
         getPromise(true).then(function (val) {
-            vm.resolve = val;
+            this.resolve = val;
         });
 
         getPromise(false).then(function (val) {
             console.log(val);
         }, function (val) {
-            vm.reject = val;
+            this.reject = val;
         });
     }
 }

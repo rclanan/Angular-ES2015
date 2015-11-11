@@ -1,10 +1,8 @@
 class ScopeController {
-   
+
     /*jshint -W038 */
     constructor($timeout) {
-        let vm = this;
-
-        Object.assign(vm, {a: 0, b: 0, c: 0, varResult: '', letResult: ''});
+        Object.assign(this, {a: 0, b: 0, c: 0, varResult: '', letResult: ''});
 
         letAndVarDemo();
         varTest();
@@ -22,15 +20,15 @@ class ScopeController {
                 var c = 'var test 1';
             }
 
-            vm.a = a;
-            vm.b = bValue;
-            vm.c = c;
+            this.a = a;
+            this.b = bValue;
+            this.c = c;
         }
-        
+
         function varTest() {
             for (var i = 0; i < 5; i++) {
                 $timeout(function () {
-                    vm.varResult = vm.varResult + i + ' ';
+                    this.varResult = this.varResult + i + ' ';
                 }, i * 100);
             }
         }
@@ -38,7 +36,7 @@ class ScopeController {
         function letTest() {
             for (let i = 0; i < 5; i++) {
                 $timeout(function () {
-                    vm.letResult = vm.letResult + i + ' ';
+                    this.letResult = this.letResult + i + ' ';
                 }, i * 100);
             }
         }

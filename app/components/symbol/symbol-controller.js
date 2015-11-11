@@ -1,7 +1,6 @@
 class SymbolController {
 
     constructor() {
-        let vm = this;
     }
 }
 

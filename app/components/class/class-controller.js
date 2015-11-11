@@ -1,28 +1,26 @@
 class ClassController {
 
     constructor() {
-        let vm = this;
-
         let person = new Person('Bob');
-        vm.result = person.greet();
+        this.result = person.greet();
 
         let javaScript = new Language('javascript');
-        vm.language = javaScript.name;
+        this.language = javaScript.name;
     }
 }
 
-class Person { 
+class Person {
     constructor(firstName) {
         this._first = firstName;
     }
-    
+
     get first() {
         return this._first;
     }
 
     greet() {
         return 'Hello, ' + this.first;
-    }                                               
+    }
 }
 
 let firstSymbol = Symbol();

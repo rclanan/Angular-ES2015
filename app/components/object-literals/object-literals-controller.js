@@ -1,22 +1,20 @@
 class ObjectLiteralsController {
 
     constructor() {
-        let vm = this;
-
         //shorthand functions
         let functionObj = {
             first: 'Michael',
             last: 'Jordan',
             name() {return this.first + ' ' + this.last;}
         };
-        vm.shortFunction = functionObj.name(); //Michael Jordan
+        this.shortFunction = functionObj.name(); //Michael Jordan
 
         //shorthand property
         let first = 'Tracy';
         let last = 'McGrady';
 
         let obj = {first, last};
-        vm.property = obj; //{"first":"Tracy","last":"McGrady"}
+        this.property = obj; //{"first":"Tracy","last":"McGrady"}
 
         //computed property
         let propKey = 'user';
@@ -26,7 +24,7 @@ class ObjectLiteralsController {
         };
 
         if (computedObj.user) {
-            vm.computed = computedObj.first; //Sam
+            this.computed = computedObj.first; //Sam
         }
     }
 }

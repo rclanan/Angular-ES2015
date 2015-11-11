@@ -1,8 +1,6 @@
 class MiscController {
 
     constructor() {
-        let vm = this;
-
         forOf();
 
         objectAssign();
@@ -16,19 +14,19 @@ class MiscController {
                 result += `${elem} `;
             }
 
-            //for-of would show 2 4 6 and for-in would show 0 1 2 
+            //for-of would show 2 4 6 and for-in would show 0 1 2
             //and any other property name. If there was an arr.foo
             //for-in would have a result of 0 1 2 foo
-            
-            vm.forOf = result;
+
+            this.forOf = result;
 
             //includes
             const name = 'Josh Smith';
-            vm.includes = name.includes('mith');
+            this.includes = name.includes('mith');
 
-            vm.startsWith = name.startsWith('Josh');
-            vm.endsWith = name.endsWith('th');
-            vm.repeat = name.repeat(3);
+            this.startsWith = name.startsWith('Josh');
+            this.endsWith = name.endsWith('th');
+            this.repeat = name.repeat(3);
         }
 
         function objectAssign () {

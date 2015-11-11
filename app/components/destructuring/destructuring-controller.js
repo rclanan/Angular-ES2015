@@ -1,8 +1,6 @@
 class DestructuringController {
 
     constructor() {
-        let vm = this;
-
         // list matching
         let [a, , b] = [1,2,3];
 
@@ -18,30 +16,30 @@ class DestructuringController {
 
         // object matching
         let {first, last} = person;
-        vm.match = first + ' ' + last;
+        this.match = first + ' ' + last;
 
         // object matching shorthand
         let {first: f, last: l} = person;
-        vm.matchShorthand = f + ' '  + l;
+        this.matchShorthand = f + ' '  + l;
 
-        let {first: firstName, last: lastName, 
+        let {first: firstName, last: lastName,
           address: {city: town}} = person;
 
-        vm.nestedObject = town;
+        this.nestedObject = town;
 
         // Param Position
         function position({first: x}) {
-            vm.position = x;
+            this.position = x;
         }
         position({first: 'Joe'});
 
         // Handles exception
-        let [test] = []; 
-        vm.test = test === undefined ? 'undefined' : test;
+        let [test] = [];
+        this.test = test === undefined ? 'undefined' : test;
 
         // defaults
         let [testDefault = 'New York'] = [];    // jshint ignore:line
-        vm.testDefault = testDefault;
+        this.testDefault = testDefault;
     }
 }
 

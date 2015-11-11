@@ -2,8 +2,6 @@ class ProxiesController {
 
     // NOTE: Won't transpile. Only works in Firefox right now
     constructor() {
-        let vm = this;
-
         let darthVader  = {
             name: 'Darth Vader',
             side: 'dark',
@@ -27,12 +25,12 @@ class ProxiesController {
             }
         });
 
-        vm.vaderSide = proxyVader.side;
-        vm.vaderWeapon = proxyVader.weapon;
+        this.vaderSide = proxyVader.side;
+        this.vaderWeapon = proxyVader.weapon;
         proxyVader.name = 'Anakin';
-        vm.vaderName = proxyVader.name;
+        this.vaderName = proxyVader.name;
         proxyVader.side = 'light';
-        vm.vaderNewSide = proxyVader.side;
+        this.vaderNewSide = proxyVader.side;
     }
 }
 
